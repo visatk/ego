@@ -1,18 +1,18 @@
 {
-	"files": [],
-	"references": [
-		{
-			"path": "./tsconfig.app.json"
-		},
-		{
-			"path": "./tsconfig.node.json"
-		},
-		{
-			"path": "./tsconfig.worker.json"
-		}
-	],
-	"compilerOptions": {
-    "baseUrl": ".",
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.worker.json"
+    }
+  ],
+  "compilerOptions": {
+    /* baseUrl is removed to fix the TS5101 deprecation error */
     "paths": {
       "@/*": ["./src/*"]
     }
