@@ -1,11 +1,10 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import {
   Activity,
   Bot,
   Command as CommandIcon,
   LayoutDashboard,
   MessageSquare,
-  MoreVertical,
   Plus,
   Search,
   Settings,
@@ -137,13 +136,12 @@ export default function App() {
               {isBotActive ? "Online" : "Offline"}
             </Badge>
             <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="rounded-full">
-                  <Avatar size="sm">
-                    <AvatarImage src="https://github.com/shadcn.png" alt="Admin" />
-                    <AvatarFallback>AD</AvatarFallback>
-                  </Avatar>
-                </Button>
+              {/* Applied base ghost button styles directly to avoid invalid DOM nesting and TS errors */}
+              <DropdownMenuTrigger className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-accent hover:text-accent-foreground focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring">
+                <Avatar size="sm">
+                  <AvatarImage src="https://github.com/shadcn.png" alt="Admin" />
+                  <AvatarFallback>AD</AvatarFallback>
+                </Avatar>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
