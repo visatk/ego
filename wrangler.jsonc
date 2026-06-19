@@ -21,11 +21,5 @@
       "database_name": "viteapp",
       "database_id": "9909fa7a-c277-4b38-96bf-b97a8008dece"
     }
-  ],
-  "r2_buckets": [
-    {
-      "binding": "BUCKET",
-      "bucket_name": "visatk"
-    }
   ]
 }
